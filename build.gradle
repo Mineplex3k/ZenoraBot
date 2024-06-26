@@ -1,19 +1,25 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version "7.1.2"
 }
 
-group = 'fr.mine'
-version = '1.0-SNAPSHOT'
+
+group = "org.example"
+version = "1.0"
+
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation("net.dv8tion:JDA:5.0.0-beta.24")
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
+
 test {
     useJUnitPlatform()
 }
+
